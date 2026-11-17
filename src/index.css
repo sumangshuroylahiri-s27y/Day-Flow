@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --df-bg: #F8FAFC;
+    --df-bg-secondary: #F1F5F9;
+    --df-card: #FFFFFF;
+    --df-border: rgba(15, 23, 42, 0.08);
+    --df-accent: #7C6BFF;
+    --df-accent-secondary: #3B82F6;
+    --df-success: #10B981;
+    --df-warning: #D97706;
+    --df-danger: #DC2626;
+    --df-text: #0F172A;
+    --df-text-muted: #475569;
+    --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  .dark {
+    --df-bg: #0B0D12;
+    --df-bg-secondary: #121620;
+    --df-card: #171D29;
+    --df-border: rgba(248, 250, 252, 0.08);
+    --df-accent: #8B7CFF;
+    --df-accent-secondary: #60A5FA;
+    --df-success: #34D399;
+    --df-warning: #FBBF24;
+    --df-danger: #F87171;
+    --df-text: #F8FAFC;
+    --df-text-muted: #94A3B8;
+  }
+
+  html {
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

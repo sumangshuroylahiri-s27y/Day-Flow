@@ -1,0 +1,6 @@
+{
+  "name": "DAYFLOW",
+  "description": "Make every day count. An all-in-one productivity workspace combining tasks, smart calendar, personal finance, notes, habits, focus timer, goals, everyday utilities, and DAYFLOW AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
